@@ -1,0 +1,1 @@
+export ExempleModel from "./lib/ExempleModel";
