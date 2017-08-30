@@ -1,1 +1,1 @@
-export ExempleModel from "./lib/ExempleModel";
+export TesteModel from "./lib/TesteModel";

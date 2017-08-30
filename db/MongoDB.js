@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Exemple } from "./schemas/exempleSchema";
+import { teste } from "./schemas/testeSchema";
 
 export default class MongoDB {
 
@@ -7,13 +7,13 @@ export default class MongoDB {
 		this.app = app;
 	}
 
-	init() {
-		const env = this.app.get("env");
+	init(app) {
+		const env = app.get("env");
 		const Schema = mongoose.Schema;
-		const db = mongoose.createConnection(this.app.get("mongoUrl"));
+		const db = mongoose.createConnection(app.get("mongoUrl"));
 
 		console.log("MONGO: Connected to" + env);
 
-		this.Exemple = db.model("exemples", exemples(Schema));
+		this.teste = db.model("testes", teste(Schema));
 	}
 }

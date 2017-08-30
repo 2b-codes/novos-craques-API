@@ -1,0 +1,22 @@
+export default {
+	OK							:{ code: 200, msg: "OK" },
+	OK_CREATED					:{ code: 201, msg: "OK_CREATED" },
+	OK_ACEPTED					:{ code: 202, msg: "OK_ACEPTED" },
+	OK_NOT_AUTHORIZED			:{ code: 203, msg: "OK_NOT_AUTHORIZED" },
+	OK_NOT_RESPONSE				:{ code: 204, msg: "OK_NOT_RESPONSE" },
+	BANNED						:{ code: 403, msg: "BANNED" },
+	TIME_OUT					:{ code: 408, msg: "TIME_OUT" },
+	OVERSIZE					:{ code: 413, msg: "OVERSIZE" },
+	EXTENSION_NOT_SUPPORTED		:{ code: 415, msg: "EXTENSION_NOT_SUPPORTED" },
+
+	DUPLICATE_KEY			:{ code: 600, msg: "DUPLICATE_KEY" },
+	WRONG_PASSWORD			:{ code: 601, msg: "WRONG_PASSWORD" },
+	MULTIPART_PARSE_ERROR	:{ code: 602, msg: "MULTIPART_PARSE_ERROR" },
+	FILE_SYSTEM_ERROR		:{ code: 603, msg: "FILE_SYSTEM_ERROR" },
+	NOT_FOUND				:{ code: 604, msg: "NOT_FOUND" },
+	MONGO_WRITE_ERROR		:{ code: 605, msg: "MONGO_WRITE_ERROR" },
+	MONGO_ACCESS_ERROR		:{ code: 606, msg: "MONGO_ACCESS_ERROR" },
+	MONGO_UPDATE_ERROR		:{ code: 607, msg: "MONGO_UPDATE_ERROR" },
+	MONGO_DELETE_ERROR		:{ code: 608, msg: "MONGO_DELETE_ERROR"},
+	SEND_EMAIL_ERROR		:{ code: 609, msg: "SEND_EMAIL_ERROR" },
+}

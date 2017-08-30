@@ -1,8 +1,8 @@
 import ResourceCreator from "./ResourceCreator";
 import {
-	ExempleModel,
-} from "../models";
-// import { entities } from "../controllers";
+	TesteModel,
+} from "../connects";
+import { Teste, Testes } from "../controllers";
 
 export default class Routes {
 	
@@ -14,16 +14,21 @@ export default class Routes {
 
 	init() {
 
-		const { mongo, app } = this;
-		const resourceCreator = new ResourceCreator(this.app, this.rootUrl);
+		const { mongo, app, rootUrl } = this;
+		const resourceCreator = new ResourceCreator(app, rootUrl);
 
 		// Models
-		const ExempleModel = new ExempleModel(mongo.Exemple);
+		const testeModel = new TesteModel(mongo.teste)
+
+		//controllers
+		const teste = new Teste(testeModel);
+		const testes = new Testes(testeModel);
 
 		//inicia a entidade passando o banco como parametro
 
 		//collections
-		resourceCreator.create(rota, entities.getControllers([ get put e os krl]))		;
+		resourceCreator.create("/teste", testes.getControllers(["post", "get"]));
+		resourceCreator.create("/teste/:id", teste.getControllers(["get", "put" ]));
 		//resouces
 		//actions
 	}
