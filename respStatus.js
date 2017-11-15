@@ -19,4 +19,6 @@ export default {
 	MONGO_UPDATE_ERROR		:{ code: 607, msg: "MONGO_UPDATE_ERROR" },
 	MONGO_DELETE_ERROR		:{ code: 608, msg: "MONGO_DELETE_ERROR"},
 	SEND_EMAIL_ERROR		:{ code: 609, msg: "SEND_EMAIL_ERROR" },
+	DUPLICATE_EMAIL			:{ code: 610, msg: "DUPLICATE_EMAIL" },
+	DUPLICATE_USERNAME		:{ code: 611, msg: "DUPLICATE_USERNAME" },
 }

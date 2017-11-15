@@ -15,7 +15,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || "dev";
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost:27017/teste";
+const mongoUrl = process.env.MONGO_URL || "";
 
 app.set("port", port);
 app.set("env", env);
@@ -26,26 +26,25 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 app.use((req, res, next) => {
-	const allowedOrigins = [
-		"chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop"
-	];
+	// const allowedOrigins = [
+	// 	"chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+	// 	"http://localhost:4000/"
+	// ];
 	
 	const origin = req.headers.origin;
-	console.log(req.headers);
 	
-	if(env == "dev") {
-		next();
-	} else {
-		allowedOrigins.map(function(allowed) {
-			if(allowed == origin) 
-				next();
-		});
-	}
-
+	// if(env == "dev") {
+	// } else {
+	// 	allowedOrigins.map(function(allowed) {
+	// 		if(allowed == origin) 
+	// 			next();
+	// 	});
+	// }
+	res.header("Access-Control-Allow-Origin", origin);
 	res.header("Access-Control-Allow-Credentials", true);
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
-	// res.send(BANNED);
+	next();
 
 });
 
