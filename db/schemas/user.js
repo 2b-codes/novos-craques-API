@@ -6,8 +6,8 @@ export function user(Schema) {
   	last_name	     : { type: String, required: true	 },
     cell_phone     : { type: String, required: true  }, //telefone celular
     email          : { type: String, required: true  }, //email
-    idol          : { type: String, required: true  }, //email
-    leg          : { type: String, required: true  }, //email
+    idol          : { type: String, required: true  }, //idilo
+    legs          : { type: String, required: true  }, //perna de jogo
 
     sex            : { type: String, required: true  }, //sexo
     birthday       : { type: Date,   required: true  }, //nascimento
