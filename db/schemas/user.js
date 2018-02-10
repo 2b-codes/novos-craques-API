@@ -2,20 +2,12 @@ export function user(Schema) {
   return new Schema({
   	user_id			   : { type: String, required: true	 },
     
-<<<<<<< HEAD
     name           : { type: String, required: true  },
   	last_name	     : { type: String, required: true	 },
     cell_phone     : { type: String, required: true  }, //telefone celular
     email          : { type: String, required: true  }, //email
     idol          : { type: String, required: true  }, //idilo
     leg           : { type: String, required: true  }, //perna de jogo
-=======
-    name            : { type: String, required: true  },
-  	last_name       : { type: String, required: true  },
-    cell_phone      : { type: String, required: true  }, // telefone celular
-    email           : { type: String, required: true  }, // email
-    idol            : { type: String, required: true  }, // idilo
-    legs            : { type: String, required: true  }, // perna de jogo
     username        : { type: String, required: true  }, // apelido
     birthday        : { type: Date,   required: true  }, // nascimento
     cep             : { type: String, required: false }, // cep
@@ -36,8 +28,6 @@ export function user(Schema) {
     position_3      : { type: String, required: false }, // posição 3
     about_user      : { type: String, required: false }, // sobre o craque
     
->>>>>>> 0c23ba1f6b10611e9c55b284d783b34e716221ee
-
     password       : { type: String, required: true  }, //senha
     
     image          : { type: String, required: false }, //imagem
