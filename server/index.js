@@ -15,7 +15,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || "dev";
-const mongoUrl = process.env.MONGO_URL || "";
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/craques";
 
 app.set("port", port);
 app.set("env", env);

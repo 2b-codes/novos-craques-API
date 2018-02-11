@@ -2,16 +2,19 @@ export function user(Schema) {
   return new Schema({
   	user_id			   : { type: String, required: true	 },
     
+
     name           : { type: String, required: true  },
   	last_name	     : { type: String, required: true	 },
     cell_phone     : { type: String, required: true  }, //telefone celular
     email          : { type: String, required: true  }, //email
     idol           : { type: String, required: false  }, //idilo
     leg             : { type: String, required: true  }, //perna de jogo
+
+
     username        : { type: String, required: true  }, // apelido
     birthday        : { type: Date,   required: true  }, // nascimento
     cep             : { type: String, required: false }, // cep
-    country         : { type: String, required: false }, // pais
+    country         : { type: String, required: false }, //pais
     sex             : { type: String, required: true  }, // sexo
     origin_state    : { type: String, required: false }, // estado de natal
     origin_city     : { type: String, required: false }, // cidade natal
